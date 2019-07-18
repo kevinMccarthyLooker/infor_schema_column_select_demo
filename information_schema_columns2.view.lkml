@@ -1,5 +1,7 @@
 view: information_schema_columns2 {
-  sql_table_name:  information_schema.columns ;;
+  derived_table:  {
+   sql: select * from information_schema.columns where table_schema='public';;
+  }
 
   measure: count {
     type: count
